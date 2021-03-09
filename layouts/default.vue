@@ -1,6 +1,7 @@
 <template lang='pug'>
 .w-full
   NavBar
+  Sidebar
   Nuxt
 </template>
 
