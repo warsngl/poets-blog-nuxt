@@ -1,5 +1,5 @@
 <template lang='pug'>
-nuxt-link.flex.justify-center(to='/')
+nuxt-link.flex.justify-center(to='/all')
   span.xxl H
   Logo
   span.xxl ckerNews

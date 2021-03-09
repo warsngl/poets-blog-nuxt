@@ -1,7 +1,7 @@
 <template lang='pug'>
 .w-06.mx-auto
-  .border-2.gray(v-for='i,idx in posts' :key='idx' @click='showComments(i.id)')
-    nuxt-link(:to="'posts/'+i.id") {{i.title}}
+  .border-2.rounded.px-2.py-2.cursor-pointer(v-for='i,idx in posts' :key='idx' @click='showComments(i.id)')
+    nuxt-link.text-xl.text-blue-300(:to="'posts/'+i.id") {{i.title}}
     p {{i.body}}
     comments(v-if='i.id==id')
 </template>
@@ -18,8 +18,12 @@ export default {
   },
   methods:{
     showComments(id){
+      if(this.id==id){
+        this.id=null
+      }else{
       this.$store.dispatch('fetchComments',id)
       this.id=id
+      }
     }
 }
 }

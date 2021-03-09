@@ -1,11 +1,10 @@
 <template lang='pug'>
-.w-full
-  .xxl.mx-auto User Page
-  h1 {{user.name}}
-  h2 {{user.username}}
-  h2 {{user.email}}
-  h2 {{user.phone}}
-  a(:href='user.website') {{user.website}}
+.text-center.rounded-2xl.border-2.bg-gray-200.w-06.mx-auto.mt-40
+  p.text-6xl {{user.username}} Page
+  p Real name: {{user.name}}
+  p Email: {{user.email}}
+  p Phone: {{user.phone}}
+  a(:href='user.website') Website: {{user.website}}
 </template>
 
 <script>

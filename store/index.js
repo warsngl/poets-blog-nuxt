@@ -28,3 +28,5 @@ export const mutations={
     state.user=p
   }
 }
+export const getters={
+}
